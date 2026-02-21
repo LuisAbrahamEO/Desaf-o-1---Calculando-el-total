@@ -29,7 +29,7 @@
                  let valorTotal = document.querySelector('.valor-total');
                  let total = precioBase * suma;
                  valorTotal.innerHTML = total;
-
+                 document.body.style.backgroundColor = 'grey';
                 "
                 >+</button>
                 <button onclick="
@@ -45,7 +45,14 @@
                  if(resta < 0){
                     cantidad.innerHTML = 0;
                     valorTotal.innerHTML = 0;
+
                  }
+                  else if (resta == 0){
+                  document.body.style.backgroundColor = 'white';  
+                  }
+                  else{
+                    document.body.style.backgroundColor = 'khaki';
+                  }
                 "
                 >-</button>
               </p>
