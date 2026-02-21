@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío 1 - JavaScript</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <section>
+        <div class="card">
+            <div class="img-card"></div>
+              <h6>Laptop Gamer AMD</h6>
+              <p>Precio base: $400000<span class="precio-inicial"></span> </p>
+        
+              <p>Cantidad:
+                <span class="cantidad">0</span>
+                <button onclick="
+                 let  cantidad = document.querySelector('.cantidad');
+                 let cuenta =Number(cantidad.innerHTML);
+                 let suma = cuenta + 1;
+                 cantidad.innerHTML =suma;
+                 let precio =document.querySelector('.precio-inicial');
+                 let precioBase = 400000;
+                 let valorTotal = document.querySelector('.valor-total');
+                 let total = precioBase * suma;
+                 valorTotal.innerHTML = total;
+
+                "
+                >+</button>
+                <button onclick="
+                 let  cantidad = document.querySelector('.cantidad');
+                 let cuenta2 =Number(cantidad.innerHTML);
+                 let resta = cuenta2 - 1;
+                 cantidad.innerHTML = resta;
+                 let precio2 =document.querySelector('.precio-inicial');
+                 let precioBase2 = 400000;
+                 let valorTotal = document.querySelector('.valor-total');
+                 let total2 = precioBase2 * resta;
+                 valorTotal.innerHTML = total2;
+                 if(resta < 0){
+                    cantidad.innerHTML = 0;
+                    valorTotal.innerHTML = 0;
+                 }
+                "
+                >-</button>
+              </p>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="total-section">
+        <p>Total a pagar: $<span class="valor-total">      
+        </span> </p>
+    </div>
+
+
+</body>
+</html>
