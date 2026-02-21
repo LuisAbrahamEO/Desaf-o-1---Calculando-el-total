@@ -8,6 +8,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     font-family: sans-serif;
 }
 
@@ -46,23 +47,43 @@ body {
     color: white;
     border-radius: 5px;
     padding: 4px 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    border: none;
 }
 
-.total-section {
-    width: 200px;
-    padding: 35px;
-    box-sizing: border-box;
+.card button:hover {
+    transform: scale(1.2);
 }
 
-.total-section .color {
+.card button:active {
+    transform: scale(0.95);
+}
+
+.card-total {
+    color: rgba(255, 255, 255, 0.931);
+    width: 180px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.692);
+    background: #d9534f;
+    padding: 20px;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    text-align: center;
 }
 
-.total-section .color div{
-    margin-left: 10px;
-    width: 20px;
-    height: 20px;
-    background-color: rgb(21, 20, 20);
-    border-radius: 50%;
-    border: solid 1px;
+.card-total h5 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.card-total .total-price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
 }
